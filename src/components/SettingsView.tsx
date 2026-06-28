@@ -43,7 +43,7 @@ export default function SettingsView({ settings, onUpdateSettings, userEmail, on
             <div className={`p-3 rounded-lg flex items-center justify-between ${isDark ? 'bg-white/5' : 'bg-slate-50'}`}>
               <div>
                 <p className="font-semibold uppercase tracking-wider text-[9px] opacity-60">Linked Email</p>
-                <p className="font-mono text-[11px] opacity-75 mt-0.5">{userEmail || 'chandanasravyasrideyyala@gmail.com'}</p>
+                <p className="font-mono text-[11px] opacity-75 mt-0.5">{userEmail}</p>
               </div>
               <span className="bg-emerald-500/10 text-emerald-500 text-[9px] font-bold uppercase tracking-wider px-2 py-1 rounded-md">
                 CONNECTED
