@@ -808,7 +808,7 @@ export default function App() {
           <SettingsView 
             settings={settings} 
             onUpdateSettings={handleUpdateSettings} 
-            userEmail={user?.email || "chandanasravyasrideyyala@gmail.com"}
+            userEmail={isDemoMode ? "demo@fluon.app" : (user?.email || "User")}
             onLogout={handleLogout}
           />
         );
@@ -862,7 +862,10 @@ export default function App() {
       {/* Main Content Pane */}
       <main className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8 max-w-7xl mx-auto w-full space-y-6">
         
-        <header className="flex justify-end items-center mb-2">
+          <header className="flex justify-end items-center mb-2 gap-4">
+          {isDemoMode && (
+            <span className="text-[10px] bg-amber-500/20 text-amber-500 px-2 py-1 rounded font-bold uppercase">Demo Mode</span>
+          )}
           <button 
             onClick={() => setShowNotifications(!showNotifications)}
             className={`p-2 rounded-full transition-colors ${isDark ? 'hover:bg-white/10' : 'hover:bg-black/5'}`}>
