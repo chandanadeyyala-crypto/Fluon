@@ -76,8 +76,14 @@ async function callCentralGemini(params: {
   contents: any;
   config?: any;
   userId?: string;
+  isDemoMode?: boolean;
 }) {
-  const { contents, config, userId } = params;
+    const { contents, config, userId, isDemoMode } = params;
+
+  if (isDemoMode) {
+    console.log("[Centralized Gemini] Demo Mode active. Returning mock response.");
+    return { text: JSON.stringify({ reply: "This is a pre-generated response for Demo Mode." }) };
+  }
 
   if (geminiCooldownUntil && Date.now() < geminiCooldownUntil) {
     throw new Error("QUOTA_EXHAUSTED");
