@@ -1,0 +1,6 @@
+{
+  "name": "Fluon",
+  "description": "An AI-powered productivity companion for students, professionals, and entrepreneurs who miss deadlines, meetings, bills, interviews, assignments, and commitments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
